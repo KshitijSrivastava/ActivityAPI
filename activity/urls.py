@@ -4,6 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    # path(r'^api-auth/', include('rest_framework.urls')),
+    path('user-activity', views.ActivityView.as_view()),
     path('activity', views.ActivityUserView.as_view()),
 ]
