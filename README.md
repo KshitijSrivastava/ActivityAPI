@@ -64,10 +64,10 @@ Creates and saves in database, the details of the user along with his activity d
 
 **Data example** All fields must be sent.
 
-real_name: Name of the user or person
-tz: Timezone in which the person resides
-start_datetime: Start datetime of the activity
-end_datetime: End datetime of the activity
+* real_name: Name of the user or person
+* tz: Timezone in which the person resides
+* start_datetime: Start datetime of the activity
+* end_datetime: End datetime of the activity
 
 ```json
 {
