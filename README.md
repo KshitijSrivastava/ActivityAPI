@@ -50,6 +50,13 @@ Design and implement a Django application with User and ActivityPeriod models, w
 
 # Documentation
 
+# Create a dummy database
+
+Creates a dummy database for users and activities.
+
+run `python manage.py populatedb`
+
+
 # Creates a User and Activity (with time duration)
 
 Creates and saves in database, the details of the user along with his activity datetime. It also creates a user if user not present in database.
@@ -96,3 +103,45 @@ For a User with real_name Egon Spengler and timezone of America/Los_Angeles, it 
 }
 ```
 
+# Get all users along with their activities
+
+Get all users along with their activities information
+
+**URL** : `/user-activity/`
+
+**Method** : `GET`
+
+**Auth required** : NO
+
+**Permissions required** : None
+
+## Success Response
+
+**Code** : `200 OK`
+
+**Content examples**
+
+For a User with real_name Egon Spengler, it has two activity periods as shown below.
+So this user has 2 activities saved in the database
+
+```json
+{
+    "ok": true,
+    "members": [
+        {
+            "user-id": 1,
+            "real_name": "Egon Spengler",
+            "tz": "America/Los_Angeles",
+            "activity_periods": [
+                {
+                    "start_datetime": "Feb 01 2020 01:33PM",
+                    "end_datetime": "Feb 01 2020 01:54PM"
+                },
+                {
+                    "start_datetime": "Mar 01 2020 11:11AM",
+                    "end_datetime": "Mar 01 2020 02:00PM"
+                }
+            ]
+        }
+    ]
+}```
