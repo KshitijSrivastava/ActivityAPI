@@ -24,6 +24,5 @@ class ActivityUserSerializer(serializers.Serializer):
             start_datetime=from_datetime,
             end_datetime=to_datetime
         )[0]
-        print(activity)
-
+        
         return activity.to_json()

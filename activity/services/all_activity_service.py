@@ -8,9 +8,8 @@ class AllActivityService():
         for user in User.objects.all():
             user_activity = user.to_json()
             try:
-                print(Activity.objects.filter(user = user))
                 activity_periods = [ period.to_json_shortened() 
-                for period in Activity.objects.filter(id = user.id)]
+                for period in Activity.objects.filter(user = user)]
             except:
                 activity_periods = []
             user_activity['activity_periods'] = activity_periods
