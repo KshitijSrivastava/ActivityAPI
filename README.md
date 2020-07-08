@@ -95,7 +95,7 @@ For a User with real_name Egon Spengler and timezone of America/Los_Angeles, it 
 
 ```json
 {
-    "id": 1,
+    "user-id": 1,
     "real_name": "Egon Spengler",
     "tz": "America/Los_Angeles",
     "start_datetime": "2020-03-01T11:11:00Z",
